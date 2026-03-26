@@ -20,7 +20,7 @@ export const links = [
   },
   {
     name: "Experience",
-    hash: "#experience",
+    hash: "#experience"
   },
   {
     name: "Contact",
@@ -50,28 +50,84 @@ export const experiencesData: any = [
 
 // sample project response
 export const projectsData = [
+   {
+    _id: "1",
+    title: "SmartBank",
+    description: "This platform helps manage blood donors by tracking donation activity...",
+    tags: ["React", "JavaScript", "React-Query"],
+    imageUrl: "./smartbank.png",
+    projectUrl: "https://smartbank.lifebanktest.com/bloodbank/",
+    featured: true,
+  },
   {
-    title: "Nerve",
+    _id: "2",
+    title: "Coop",
+    description:
+      "A platform for hospitals and medical facilities to get medical supplies collectively at cheaper rates.",
+    tags: ["React Native", "Typescript", "Redux"],
+    imageUrl: "./coop.png",
+    projectUrl: "https://apps.apple.com/us/app/coop-by-lifebank/id6743861129",
+    featured: true,
+  },
+   {
+    _id: "3",
+    title: "Finance Lite",
+    description:
+      "This platform is a healthcare dashboard that helps manage orders, customers, and finances while providing tools for invoicing, pricing, and tracking business performance in one place.This platform is a healthcare dashboard that helps manage orders, customers, and finances while providing tools for invoicing, pricing, and tracking business performance in one place.",
+    tags: ["NextJs", "Typescript", "ReactQuery", "Tailwind"],
+    imageUrl: "./flite.png",
+    projectUrl: "https://flite.lifebank.ng/dashboard/",
+    featured: true,
+  },
+  {
+    _id: "4",
+    title: "Lite",
     description:
       "A digital marketplace for hospitals to order all critical supplies on time and get it delivered to them in the right condition",
-    tags: ["React Native", "Typescript", "Redux"],
-    imageUrl: "./nerve.png",
-    projectUrl: "https://lifebank.ng/nerve_order/",
+    tags: ["React", "JavaScript", "Redux", "SCSS"],
+    imageUrl: "./lite.png",
+    projectUrl: "https://lite.lifebank.ng/",
+    featured: true,
   },
   {
-    title: "Nabafat.ai",
+    _id: "5",
+    title: "One Vendor",
     description:
-      "Nabafat.AI is a central platform to manage vision intelligence inside smart machines. Successfully introduce AI in dynamic environments without the need for AI experts.",
-    tags: ["React", "SCSS"],
-    imageUrl: "./nabafat.png",
-    projectUrl: "https://nabafat.ai",
+      "OVA helps manage medical products.It helps track inventory, manage orders, and collaborate with your team seamlessly.",
+    tags: ["React Native", "TypeScript", "Redux"],
+    imageUrl: "./ova.png",
+    projectUrl: "https://apps.apple.com/us/app/one-vendor/id6736524230",
+    featured: true,
   },
   {
-    title: "Get Linked",
-    description: "Getlinked.ai hackathon challenge.",
-    tags: ["Next.js", "Typescript", "Tailwind", "Framer Motion", "Axios"],
-    imageUrl: "./getLinked.png",
-    projectUrl: "https://get-linked-rhammy.vercel.app/",
+    _id: "6",
+    title: "ElderBerry",
+    description:
+      "EDB is a digital health platform connecting hospitals and doctors to elderly patients whose care is funded by guardians abroad",
+    tags: ["React Native", "TypeScript", "Redux"],
+    imageUrl: "./edb.png",
+    projectUrl: "https://apps.apple.com/us/app/elderberry-by-lifebank/id6748587591",
+    featured: true,
+  },
+   {
+    _id: "7",
+    title: "ElderBerry website",
+    description:
+      "...",
+    tags: ["NextJS", "TailwindCSS"],
+    imageUrl: "./edbl.png",
+    projectUrl: "https://elderberry.lifebankcares.com/",
+    featured: true,
+  },
+   {
+    _id: "8",
+    title: "Boat Foundation Website",
+    description:
+      "...",
+    tags: ["NextJS", "TailwindCSS"],
+    imageUrl: "./boat.png",
+    projectUrl: "https://elderberry.lifebankcares.com/",
+    featured: true,
   },
 ] as const;
 

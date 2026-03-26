@@ -18,50 +18,50 @@ const resend = new Resend("re_38ne9hCA_MrpGPJd1cQibupYPmK8z14PQ");
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
   const [loading, setLoading] = useState<boolean>(false);
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
+  // const [email, setEmail] = useState<string>("");
+  // const [message, setMessage] = useState<string>("");
 
-  const handleSubmit = async (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-    const formData: any = {
-      sendEmail: email,
-      message: message,
-    };
-    setLoading(true);
-    // const { data, error } = await sendEmail({
-    //   sendEmail: email,
-    //   message: message,
-    // });
-    let data;
-    try {
-      data = await resend.emails.send({
-        from: "Contact Form <onboarding@resend.dev>",
-        to: process.env.NEXT_PUBLIC_CONTACT_FORM_EMAIL,
-        subject: "Message from contact form",
-        reply_to: email,
-        react: React.createElement(ContactFormEmail, {
-          message: message,
-          senderEmail: email,
-        }),
-      });
-      toast.success("Email sent successfully!");
-    } catch (err: unknown) {
-      let error = getErrorMessage(err);
-      toast.error(error);
-      setLoading(false);
-      return;
-    }
+  // const handleSubmit = async (e: { preventDefault: () => void }) => {
+  //   e.preventDefault();
+  //   const formData: any = {
+  //     sendEmail: email,
+  //     message: message,
+  //   };
+  //   setLoading(true);
+  //   // const { data, error } = await sendEmail({
+  //   //   sendEmail: email,
+  //   //   message: message,
+  //   // });
+  //   let data;
+  //   try {
+  //     data = await resend.emails.send({
+  //       from: "Contact Form <onboarding@resend.dev>",
+  //       to: process.env.NEXT_PUBLIC_CONTACT_FORM_EMAIL,
+  //       subject: "Message from contact form",
+  //       reply_to: email,
+  //       react: React.createElement(ContactFormEmail, {
+  //         message: message,
+  //         senderEmail: email,
+  //       }),
+  //     });
+  //     toast.success("Email sent successfully!");
+  //   } catch (err: unknown) {
+  //     let error = getErrorMessage(err);
+  //     toast.error(error);
+  //     setLoading(false);
+  //     return;
+  //   }
 
-    // if (error) {
-    //   toast.error(error);
-    //   setLoading(false);
-    //   return;
-    // }
-    // setLoading(false);
-    // toast.success("Email sent successfully!");
+  //   // if (error) {
+  //   //   toast.error(error);
+  //   //   setLoading(false);
+  //   //   return;
+  //   // }
+  //   // setLoading(false);
+  //   // toast.success("Email sent successfully!");
 
-    // // console.log("for", formData);
-  };
+  //   // // console.log("for", formData);
+  // };
 
   return (
     <motion.section
@@ -92,6 +92,8 @@ export default function Contact() {
 
       <form
         className="mt-10 flex flex-col dark:text-black"
+        action="https://formspree.io/f/mdaporpd"
+        method="POST"
         // onSubmit={handleSubmit}
         // action={async (formData) => {
         //   const { data, error } = await sendEmail(formData);
@@ -111,7 +113,7 @@ export default function Contact() {
           required
           maxLength={500}
           placeholder="Your email"
-          onChange={(e) => setEmail(e.target.value)}
+          // onChange={(e) => setEmail(e.target.value)}
         />
         <textarea
           className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
@@ -119,14 +121,14 @@ export default function Contact() {
           placeholder="Your message"
           required
           maxLength={5000}
-          onChange={(e) => setMessage(e.target.value)}
+          // onChange={(e) => setMessage(e.target.value)}
         />
         <div className="flex items-center justify-center self-center">
           <button
             type="submit"
             className="flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
-            disabled={loading}
-            onClick={handleSubmit}
+            // disabled={loading}
+            // onClick={handleSubmit}
           >
             {loading ? (
               <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
