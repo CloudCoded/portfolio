@@ -72,7 +72,7 @@ export default function Experience() {
                 {item.description.map((text, index) => (
                   <li
                     key={index}
-                    className="!mt-1 !font-normal text-gray-700 dark:text-white/75 text-justify flex gap-2"
+                    className="!mt-1 !font-normal text-gray-700 dark:text-white/75 gap-2"
                   >
                     <span>◉</span> {text}
                   </li>
