@@ -73,7 +73,7 @@ export const projectsData = [
     _id: "3",
     title: "Finance Lite",
     description:
-      "This platform is a healthcare dashboard that helps manage orders, customers, and finances while providing tools for invoicing, pricing, and tracking business performance in one place.This platform is a healthcare dashboard that helps manage orders, customers, and finances while providing tools for invoicing, pricing, and tracking business performance in one place.",
+      "This platform is a healthcare dashboard that helps manage orders, customers, and finances while providing tools for invoicing, pricing, and tracking business performance in one place.",
     tags: ["NextJs", "Typescript", "ReactQuery", "Tailwind"],
     imageUrl: "./flite.png",
     projectUrl: "https://flite.lifebank.ng/dashboard/",
@@ -95,7 +95,7 @@ export const projectsData = [
     description:
       "OVA helps manage medical products.It helps track inventory, manage orders, and collaborate with your team seamlessly.",
     tags: ["React Native", "TypeScript", "Redux"],
-    imageUrl: "./ova.png",
+    imageUrl: "./OVA.png",
     projectUrl: "https://apps.apple.com/us/app/one-vendor/id6736524230",
     featured: true,
   },
