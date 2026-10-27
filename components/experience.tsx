@@ -26,6 +26,35 @@ const experiences = [
       "Contributed to applications that optimized medical supply tracking, improving operational efficiency and revenue growth for healthcare facilities.",
     ],
   },
+  {
+    _id: "2",
+    title: "Full Stack Developer",
+    company: "TriveStack",
+    location: "Remote",
+    startDate: "2026-07-01",
+    endDate: "2026-09-01",
+    current: false,
+    description: [
+      "Architected scalable e-commerce features for Trivestack, supporting independent storefronts across a multi-store platform.",
+      "Connected frontend and backend services through GraphQL, enabling cohesive data flow across e-commerce functionality.",
+      "Resolved application defects and integration challenges, reducing recurring technical issues by 24% through systematic debugging and code reviews.",
+    ],
+  },
+  {
+    _id: "3",
+    title: "Mobile Developer",
+    company: "InnovaSwift Technologies",
+    location: "Remote",
+    startDate: "2026-03-01",
+    endDate: "2026-10-01",
+    current: true,
+    description: [
+      "Translated UI/UX designs into responsive mobile interfaces across iOS and Android platforms.",
+      "Coordinated frontend requirements with backend services, ensuring accurate data presentation and reliable application behaviour.",
+      "Collaborated with designers and backend engineers, reducing interface integration issues by 25% through structured development coordination.",
+      "Developed 20+ reusable interface components, improving consistency and accelerating implementation across core application screens.",
+    ],
+  },
 ];
 
 export default function Experience() {
@@ -55,7 +84,15 @@ export default function Experience() {
                     ? "0.4rem solid #9ca3af"
                     : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
-              date={`June 2023 - February 2026`}
+              date={`${new Date(item.startDate).toLocaleString("default", {
+                month: "short",
+              })} ${new Date(item.startDate).getFullYear()} - ${
+                item.current
+                  ? "Present"
+                  : `${new Date(item.endDate).toLocaleString("default", {
+                      month: "short",
+                    })} ${new Date(item.endDate).getFullYear()}`
+              }`}
               icon={<FaLaptop />}
               iconStyle={{
                 background:

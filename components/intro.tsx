@@ -28,7 +28,7 @@ export default function Intro() {
       >
         <span className="font-bold">Hello, I'm Abdulazeez Olamide</span>
         <span className="block text-lg sm:text-2xl mt-2 text-gray-400">
-          Software Engineer
+          Frontend Software Engineer
         </span>
       </motion.h1>
 
